@@ -42,9 +42,10 @@
     const correctPassword = 'GMIS2025SCOREBOARD';
 
     // Clear login status on page load to force login every time
-    window.addEventListener('load', () => {
-      localStorage.removeItem('isLoggedIn');
-    });
+-    window.addEventListener('load', () => {
+-      localStorage.removeItem('isLoggedIn');
+-    });
++    // Removed the code that clears login status on page load to keep login status until logout or browser cleared
 
     document.getElementById('login-form').addEventListener('submit', function(event) {
       event.preventDefault();

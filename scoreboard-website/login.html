@@ -41,6 +41,11 @@
     const correctUsername = 'WEIWEI';
     const correctPassword = 'GMIS2025SCOREBOARD';
 
+    // Clear login status on page load to force login every time
+    window.addEventListener('load', () => {
+      localStorage.removeItem('isLoggedIn');
+    });
+
     document.getElementById('login-form').addEventListener('submit', function(event) {
       event.preventDefault();
       const username = document.getElementById('username').value.trim();
